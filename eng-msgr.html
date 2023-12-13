@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page with Embedded Code</title>
+    <title>Embedded Engagement Messenger</title>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to My Simple Page!</h1>
+        <h1>Welcome to the Embedded Engagement Messenger!</h1>
     </header>
 
     <section>
-        <p>This is a basic HTML page with a welcome message.</p>
+        <p>This is a basic HTML page with embedded ServiceNow Engagement Messenger.</p>
         <p>Feel free to explore and modify it as you like!</p>
+        <!-- Add a button to launch Engagement Messenger -->
+        <button onclick="launchEngagementMessenger()">Launch Engagement Messenger</button>
     </section>
 
     <footer>
-        <p>Embedded Code:</p>
-        <pre>
-            <code>
-                <script src="https://dev175885.service-now.com/scripts/sn_csm_ec.js?v=5.5"></script>
-<script>
-SN_CSM_EC.init({
-	moduleID: "https://dev175885.service-now.com/#6246e8d6474331104c5e379bd36d43d7",
-	loadFeature: SN_CSM_EC.loadEMFeature()
-	SN_CSM_EC.onLogin()
-});
-
-/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Messenger automatically when the user logs in to the main portal */
-/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Messenger automatically when the user logs out from the main portal */
-</script>
-            </code>
-        </pre>
+        <!-- Embedded Code will go here -->
     </footer>
+
+    <script>
+        function launchEngagementMessenger() {
+            // Replace the following values with your actual ServiceNow Engagement Messenger and SSO configuration
+            const engagementMessengerBaseUrl = 'https://dev175885.service-now.com/';
+            const ssoToken = 'your_sso_token';  // You need to obtain this from your SSO authentication process
+
+            // Open Engagement Messenger with SSO token
+            window.location.href = `${engagementMessengerBaseUrl}/$sn-engagement-messenger.do?sysparm_sso_token=${ssoToken}`;
+        }
+    </script>
 
 </body>
 </html>
+
