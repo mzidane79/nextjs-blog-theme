@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page with Embedded Code</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Simple Page!</h1>
+    </header>
+
+    <section>
+        <p>This is a basic HTML page with a welcome message.</p>
+        <p>Feel free to explore and modify it as you like!</p>
+    </section>
+
+    <footer>
+        <p>Embedded Code:</p>
+        <pre>
+            <code>
+                <script src="https://dev175885.service-now.com/scripts/sn_csm_ec.js?v=5.5"></script>
+<script>
+SN_CSM_EC.init({
+	moduleID: "https://dev175885.service-now.com/#6246e8d6474331104c5e379bd36d43d7",
+	loadFeature: SN_CSM_EC.loadEMFeature()
+	SN_CSM_EC.onLogin()
+});
+
+/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Messenger automatically when the user logs in to the main portal */
+/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Messenger automatically when the user logs out from the main portal */
+</script>
+            </code>
+        </pre>
+    </footer>
+
+</body>
+</html>
